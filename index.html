@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mayu YURI">
+    <meta name="keywords" content="html, css, javascript">
+    <title>ホーム | ガチャガチャ専門店カプセルワールド</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div id="atama"></div>
+        <h1>ガチャガチャ専門店カプセルワールド</h1>
+    </header>
+
+    <nav>
+        <a href="index.html" target="_self">ホーム</a>
+        <a href="table_list.html" target="_self">ご利用案内</a>
+        <a href="Sankome_index.html" target="_self">店舗紹介</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>お店について</h2>
+            <div>
+                <p>カプセルワールドは、日本最大級のガチャガチャ（カプセルトイ）専門店です。</p>
+                <p>話題の最新フィギュアから、クスッと笑えるユニークな雑貨まで豊富に取り揃えています。</p>
+            </div>
+
+            <section>
+                <h3>当店のこだわり</h3>
+                <p>毎日新しいガチャガチャが入荷するため、いつ来ても新しい発見があります。</p>
+            </section>
+
+            <!-- JS連携：メッセージ切り替え -->
+            <section>
+                <h3>案内アナウンス（Language）</h3>
+                <p>言語を選択してください：</p>
+                <button onclick="changeWelcomeMessage(0)">日本語</button>
+                <button onclick="changeWelcomeMessage(1)">English</button>
+                <button onclick="changeWelcomeMessage(2)">Français</button>
+                <button onclick="changeWelcomeMessage(3)">Español</button>
+                <p id="say_hello">いらっしゃいませ！カプセルワールドへようこそ！</p>
+            </section>
+
+            <section>
+                <h3>Web限定！お試しガチャ体験ゲーム</h3>
+                <p>ボタンを押してハンドルを回してみよう！</p>
+                <button onclick="playGachaGame()">ガチャを回す！</button>
+
+                <p id="result">（ここに回した結果が表示されます）</p>
+            </section>
+
+            <!-- JS連携：おすすめコーナー診断 -->
+            <section>
+                <h3>本日のおすすめコーナー診断</h3>
+                <button onclick="diagnoseArea()">オススメの棚を診断する</button>
+                <p id="area_recommend"></p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <h3>アクセス</h3>
+        <p>〒123-4567 東京都渋谷区神南1-2-3</p>
+        <p>電話番号: 080-1234-5678</p>
+        <p>営業時間: 10:00 - 20:00</p>
+
+        <p><a href="#atama" target="_self">トップに戻る</a></p>
+
+        Copyright &copy; Mayu YURI, All rights reserved.
+    </footer>
+
+    <!-- JSフォルダの中の main.js を読み込む -->
+    <script src="JS/main_1.js"></script>
+</body>
+
+</html>
