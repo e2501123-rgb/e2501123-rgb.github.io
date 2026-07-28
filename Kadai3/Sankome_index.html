@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mayu YURI">
+    <meta name="keywords" content="html, css, javascript">
+    <title>店舗紹介ビデオ | ガチャガチャ専門店カプセルワールド</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div id="atama"></div>
+        <h1>ガチャガチャ専門店カプセルワールド</h1>
+    </header>
+
+    <nav>
+        <a href="index.html" target="_self">ホーム</a>
+        <a href="table_list.html" target="_self">ご利用案内</a>
+        <a href="Sankome_index.html" target="_self">店舗紹介</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>店舗紹介</h2>
+
+            <!-- JS連携：マップ切り替え -->
+            <section>
+                <h3>階数別 店内マップ</h3>
+                <p><a href="#poka" target="_self">店内マップをスキップ</a></p>
+
+                <div>
+                    <button onclick="switchFloor(-1)">前のフロアへ</button>
+                    <button onclick="switchFloor(1)">次のフロアへ</button>
+                    <span id="floor_title" style="font-weight: bold; margin-left:10px;">現在の表示: 1階マップ</span>
+                </div>
+                <br>
+                <img id="map_img" src="IMG/CapselToyMap1.png" alt="店内マップの画像" height="500" width="800">
+            </section>
+
+            <p><a id="poka"></a></p>
+
+            <!-- JS連携：混雑状況確認 -->
+            <section>
+                <h3>現在の店内混雑状況（リアルタイム予測）</h3>
+                <button onclick="checkCongestion()">最新の混雑度を確認する</button>
+                <p id="congestion_status">ボタンを押すと現在の混雑状況が表示されます。</p>
+            </section>
+
+            <section>
+                <h3>店内イメージ</h3>
+                <p><a href="#momo" target="_self">店内イメージをスキップ</a></p>
+                <img src="IMG/CapselToy.png" alt="店内のイメージ画像" height="500" width="800">
+                <img src="IMG/CapselToy_2.jpg" alt="店内のイメージ画像" height="400" width="800">
+            </section>
+
+            <p><a id="momo"></a></p>
+
+
+
+        </section>
+    </main>
+
+    <footer>
+        <h3>アクセス</h3>
+        <p>〒123-4567 東京都渋谷区神南1-2-3</p>
+        <p>電話番号: 080-1234-5678</p>
+        <p>営業時間: 10:00 - 20:00</p>
+
+        <p><a href="#atama" target="_self">トップに戻る</a></p>
+
+        Copyright &copy; Mayu YURI, All rights reserved.
+    </footer>
+
+    <!-- JSフォルダの中の main_2.js を読み込む -->
+    <script src="JS/main_2.js"></script>
+</body>
+
+</html>
